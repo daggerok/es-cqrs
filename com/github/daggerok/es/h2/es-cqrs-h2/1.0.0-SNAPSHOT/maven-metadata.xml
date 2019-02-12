@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.github.daggerok.es.h2</groupId>
+  <artifactId>es-cqrs-h2</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20190212.224348</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20190212224348</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0.0-20190212.224348-1</value>
+        <updated>20190212224348</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.0-20190212.224348-1</value>
+        <updated>20190212224348</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

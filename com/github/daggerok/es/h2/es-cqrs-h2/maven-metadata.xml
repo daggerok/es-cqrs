@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.daggerok.es.h2</groupId>
+  <artifactId>es-cqrs-h2</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20190212224348</lastUpdated>
+  </versioning>
+</metadata>
