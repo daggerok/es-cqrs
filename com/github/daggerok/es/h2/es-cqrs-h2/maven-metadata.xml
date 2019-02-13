@@ -4,8 +4,8 @@
   <artifactId>es-cqrs-h2</artifactId>
   <versioning>
     <versions>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190213014838</lastUpdated>
+    <lastUpdated>20190213020320</lastUpdated>
   </versioning>
 </metadata>

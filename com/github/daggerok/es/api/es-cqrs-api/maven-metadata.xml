@@ -4,8 +4,8 @@
   <artifactId>es-cqrs-api</artifactId>
   <versioning>
     <versions>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190213014835</lastUpdated>
+    <lastUpdated>20190213020318</lastUpdated>
   </versioning>
 </metadata>
