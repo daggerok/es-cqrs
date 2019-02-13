@@ -266,7 +266,7 @@
               <fileSets>
                 <fileSet>
                   <directory>${maven.multiModuleProjectDirectory}</directory>
-                  <includes><include>**/*.md</include></includes>
+                  <includes><include>*.md</include></includes>
                 </fileSet>
                 <fileSet>
                   <directory>${maven.multiModuleProjectDirectory}/es-cqrs-example/target</directory>
