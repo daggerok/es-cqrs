@@ -77,10 +77,18 @@ _prepare release_
 # ./mvnw release:rollback
 ```
 
+_update all modules to next SNAPSHOT version manually_
+
+```bash
+./mvnw build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion}-SNAPSHOT
+```
+
 _for lazy people_
 
 ```bash
-bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh ; bash ./bin/maven-release-plugin.sh  
+bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh
+bash ./bin/maven-release-plugin.sh ; bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh
+bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh ; bash ./bin/maven-release-plugin.sh ; bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh
 ```
 
 links:

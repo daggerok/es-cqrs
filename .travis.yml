@@ -10,25 +10,25 @@ env:
     secure: fWl6aBxNuzPFcvbc/4vgVevGD/a5ZH5/eMW33wjlxCmz4tsmlFtA+LjlWzM45q9A0sju9Fe/ihOk/86ydxByAO3d8KD901wiSeHm0K47l0xx8BGQafAHp+pZFG3fpYFdvzWrpYoyGKgQgiy6b9DJSq/7MEd68HCJO4nM7WWJhm5LsfogUPaTarSMyDG3z8wwVrmB7i/kweF4lqPiBsKPtS5WPEdOW7qabajCKQi1FwPxq5qN3QLDSmIHRKxb+cgGfuXX4vOsevEaP2/e8gZjJw/bQ8r1qFgQHTgMTjLRZElEEi3GoRnXmUPCNgMZ4FRPR6ISVmBoVCXeoUu+7ePLzsOUW+AqpSQrjvUykYAP+2gGKCBQEMESF3dRCMA30n2DMb9ISa+Zx7qxWZV+BVpgOFYckPUhM3Greacf6akN5wEzLb97z0ivLa2o2ezVgLkZeq0/togUJV4nQe1vEmPQqeNX/edgg377DuH8TsUb/RRQJAMgZplTge+YjzCqtlfLwD5RZ4JYtiZysAFJYNl1K3taVmNMRblpJ188pBA4carT4/jmc05dtbsdy7pWByEskW7FZiUbnLW8XiL86TUfmN4khg98AGgSH4lcDYh34LFtaGdwA1okE0e9rKBeH8MiQpA6ESn/aLNXg6CMazv3uhXzfHnnF59DMzeTf1a9ixI=
 
 after_success:
-  # publish tag release
-  - mkdir -p ${HOME}/.m2
-  - echo '<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"            ' >  ${HOME}/.m2/settings.xml
-  - echo '          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     ' >> ${HOME}/.m2/settings.xml
-  - echo '          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0' >> ${HOME}/.m2/settings.xml
-  - echo '                    http://maven.apache.org/xsd/settings-1.0.0.xsd">' >> ${HOME}/.m2/settings.xml
-  - echo '  <servers>                                                         ' >> ${HOME}/.m2/settings.xml
-  - echo '    <server>                                                        ' >> ${HOME}/.m2/settings.xml
-  - echo '      <id>github</id>                                               ' >> ${HOME}/.m2/settings.xml
-  - echo '      <username>daggerok</username>                                 ' >> ${HOME}/.m2/settings.xml
-  - echo "      <password>${GITHUB_PASSWORD}</password>                       " >> ${HOME}/.m2/settings.xml
-  - echo '    </server>                                                       ' >> ${HOME}/.m2/settings.xml
-  - echo '  </servers>                                                        ' >> ${HOME}/.m2/settings.xml
-  - echo '</settings>                                                         ' >> ${HOME}/.m2/settings.xml
-  #
-  - ./mvnw -P local-deploy
-  - ./mvnw -P create-github-release -pl :es-cqrs
-  - rm -rf ~/.m2/*.xml
-  #
+#  # prepare settings.xml to publish tag release
+#  - mkdir -p ${HOME}/.m2
+#  - echo '<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"            ' >  ${HOME}/.m2/settings.xml
+#  - echo '          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     ' >> ${HOME}/.m2/settings.xml
+#  - echo '          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0' >> ${HOME}/.m2/settings.xml
+#  - echo '                    http://maven.apache.org/xsd/settings-1.0.0.xsd">' >> ${HOME}/.m2/settings.xml
+#  - echo '  <servers>                                                         ' >> ${HOME}/.m2/settings.xml
+#  - echo '    <server>                                                        ' >> ${HOME}/.m2/settings.xml
+#  - echo '      <id>github</id>                                               ' >> ${HOME}/.m2/settings.xml
+#  - echo '      <username>daggerok</username>                                 ' >> ${HOME}/.m2/settings.xml
+#  - echo "      <password>${GITHUB_PASSWORD}</password>                       " >> ${HOME}/.m2/settings.xml
+#  - echo '    </server>                                                       ' >> ${HOME}/.m2/settings.xml
+#  - echo '  </servers>                                                        ' >> ${HOME}/.m2/settings.xml
+#  - echo '</settings>                                                         ' >> ${HOME}/.m2/settings.xml
+#  # publish github release
+#  - ./mvnw -P local-deploy
+#  - ./mvnw -P create-github-release -pl :es-cqrs
+#  - rm -rf ~/.m2/*.xml
+  # test if github could be used as maven repository
   - rm -rf ~/.m2/repository/com/github/daggerok
   - ./mvnw -f samples/github-maven-repository-sample/pom.xml
   - java -jar samples/github-maven-repository-sample/target/*-all.jar

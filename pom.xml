@@ -14,7 +14,7 @@
   <description>ES/CQRS modules</description>
   <groupId>com.github.daggerok.es</groupId>
   <artifactId>es-cqrs</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -116,26 +116,6 @@
     </pluginManagement>
 
     <plugins>
-      <!--<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.0.1</version>
-        <configuration>
-          <minmemory>128m</minmemory>
-          <maxmemory>1g</maxmemory>
-          <groups>
-            <group>
-              <title>Core Packages</title>
-              <packages>com.github.daggerok.es*</packages>
-            </group>
-            <group>
-              <title>Extension Packages</title>
-              <packages>com.github.daggerok.es.*</packages>
-            </group>
-          </groups>
-        </configuration>
-      </plugin>-->
-
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
