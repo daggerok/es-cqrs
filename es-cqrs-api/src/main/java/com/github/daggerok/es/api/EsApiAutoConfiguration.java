@@ -1,9 +1,9 @@
-package com.github.daggerok.es.h2;
+package com.github.daggerok.es.api;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EsH2Autoconfiguration {
+public class EsApiAutoConfiguration {
 
   public static void main(String[] args) {
     //
