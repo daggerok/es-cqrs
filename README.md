@@ -28,16 +28,40 @@ _push github maven repository_
 _using github maven branch as maven repository_
 
 ```xml
-<repositories>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- ... -->
+  <repositories>
     <repository>
-        <id>daggerok-es-cqrs-github-maven-repo</id>
-        <url>https://raw.githubusercontent.com/daggerok/es-cqrs/maven/</url>
-        <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy><!-- rly? attention! -->
-        </snapshots>
+      <id>daggerok-es-cqrs-github-maven-repo</id>
+      <url>https://raw.githubusercontent.com/daggerok/es-cqrs/maven/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy><!-- rly? attention! -->
+      </snapshots>
     </repository>
-</repositories>
+  </repositories>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.github.daggerok.es</groupId>
+        <artifactId>es-cqrs</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.github.daggerok.es.api</groupId>
+      <artifactId>es-cqrs-api</artifactId>
+    </dependency>
+  </dependencies>
+  <!-- ... -->
+</project>
 ```
 
 _prepare release_
