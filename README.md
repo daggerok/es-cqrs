@@ -77,6 +77,12 @@ _prepare release_
 # ./mvnw release:rollback
 ```
 
+_for lazy people_
+
+```bash
+bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh ; bash ./bin/maven-release-plugin.sh  
+```
+
 links:
 
 - https://github.com/opengeospatial/cite/wiki/How-to-create-Releases-with-Maven
