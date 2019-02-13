@@ -12,7 +12,7 @@
   <description>ES/CQRS modules</description>
   <groupId>com.github.daggerok.es</groupId>
   <artifactId>es-cqrs</artifactId>
-  <version>1.0.4-SNAPSHOT</version>
+  <version>1.0.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>

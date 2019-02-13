@@ -4,6 +4,10 @@ jdk: openjdk8
 install: true
 script:
   - ./mvnw >/dev/null
+  # test if github could be used as maven repository
+  - rm -rf ~/.m2/repository/com/github/daggerok
+  - ./mvnw -f samples/github-maven-repository-sample/pom.xml
+  - java -jar samples/github-maven-repository-sample/target/*-all.jar
 
 env:
   global:
@@ -28,10 +32,6 @@ after_success:
 #  - ./mvnw -P local-deploy
 #  - ./mvnw -P create-github-release -pl :es-cqrs
 #  - rm -rf ~/.m2/*.xml
-  # test if github could be used as maven repository
-  - rm -rf ~/.m2/repository/com/github/daggerok
-  - ./mvnw -f samples/github-maven-repository-sample/pom.xml
-  - java -jar samples/github-maven-repository-sample/target/*-all.jar
 
 cache:
   packages: true

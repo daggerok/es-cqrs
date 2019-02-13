@@ -48,7 +48,7 @@ _using github maven branch as maven repository_
       <dependency>
         <groupId>com.github.daggerok.es</groupId>
         <artifactId>es-cqrs</artifactId>
-        <version>1.0.4-SNAPSHOT</version>
+        <version>1.0.5-SNAPSHOT</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
