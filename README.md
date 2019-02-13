@@ -48,7 +48,7 @@ _using github maven branch as maven repository_
       <dependency>
         <groupId>com.github.daggerok.es</groupId>
         <artifactId>es-cqrs</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.3-SNAPSHOT</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -90,7 +90,7 @@ _for lazy people_
 # bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh
 
 ## release new version and update maven release and everything else...
-bash ./bin/maven-release-plugin.sh ; ./mvnw -P versions -pl :es-cqrs
+bash ./bin/maven-release-plugin.sh ; bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh
 ```
 
 links:
