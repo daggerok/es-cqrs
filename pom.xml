@@ -287,6 +287,33 @@
         </plugins>
       </build>
     </profile>
+
+    <profile>
+      <id>versions</id>
+      <build><!-- ./mvnw -P versions -pl :es-cqrs -->
+        <defaultGoal>clean resources:resources</defaultGoal>
+        <resources>
+          <resource>
+            <directory>./maven-substitutions</directory>
+            <filtering>true</filtering>
+          </resource>
+        </resources>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+              <delimiters>
+                <delimiter>@{*}</delimiter>
+              </delimiters>
+              <outputDirectory>./</outputDirectory>
+              <overwrite>true</overwrite>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 
 </project>
