@@ -93,6 +93,14 @@ _for lazy people_
 bash ./bin/maven-release-plugin.sh ; bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh
 ```
 
+_veeery lazy_
+
+```bash
+bash ./bin/maven-release-plugin.sh ; ./mvnw -P versions -pl :es-cqrs ; \
+  bash ./bin/local-deploy.sh ; bash ./bin/create-github-release.sh ; bash ./bin/github-maven-repository.sh ; \
+  git add . ; git commit -am "Start next version." ; git push origin master
+```
+
 links:
 
 - https://github.com/opengeospatial/cite/wiki/How-to-create-Releases-with-Maven
