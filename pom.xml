@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.1.2.RELEASE</version>
-    <relativePath /> <!-- lookup parent from repository -->
+    <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
   <description>ES/CQRS modules</description>
   <groupId>com.github.daggerok.es</groupId>
   <artifactId>es-cqrs</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -35,6 +37,7 @@
 
     <java.version>1.8</java.version>
     <kotlin.version>1.3.21</kotlin.version>
+    <surefire.groups></surefire.groups>
   </properties>
 
   <dependencyManagement>
@@ -113,6 +116,26 @@
     </pluginManagement>
 
     <plugins>
+      <!--<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+          <minmemory>128m</minmemory>
+          <maxmemory>1g</maxmemory>
+          <groups>
+            <group>
+              <title>Core Packages</title>
+              <packages>com.github.daggerok.es*</packages>
+            </group>
+            <group>
+              <title>Extension Packages</title>
+              <packages>com.github.daggerok.es.*</packages>
+            </group>
+          </groups>
+        </configuration>
+      </plugin>-->
+
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
